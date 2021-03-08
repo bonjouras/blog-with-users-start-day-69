@@ -15,9 +15,10 @@ from sqlalchemy.ext.declarative import declarative_base
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("SECKRETKEY")
+app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
 ckeditor = CKEditor(app)
 Bootstrap(app)
+print(os.getenv("SECKRETKEY"))
 
 login_manager = LoginManager()
 login_manager.init_app(app)
